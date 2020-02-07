@@ -10,7 +10,7 @@ namespace AgilityFramework
             public DbSet<Stocks> Stock { get; set; }
         
             protected override void OnConfiguring(DbContextOptionsBuilder options)
-                => options.UseSqlite("Data Source=stock.db");
+                => options.UseSqlite("Data Source" = + Path.Combine(ApplicationData.Current.LocalFolder.Path, "stocks.db"));
         }
 
         public class Stocks

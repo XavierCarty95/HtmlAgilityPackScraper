@@ -88,7 +88,10 @@ namespace AgilityFramework
                 var blogs = context.Stock.ToList();
                 foreach ( var blog in blogs)
                 {
+                    Console.WriteLine(blog.StockRecord);
                     Console.WriteLine(blog.Change);
+                    Console.WriteLine(blog.ID);
+                    Console.WriteLine(blog.Symbol);
                 }
                
                    
